@@ -11,12 +11,13 @@ cluster:
   namespace: jx
   project: jenkins-x-bdd3
   provider: gke
+  registry: gcr.io
   zone: europe-west1-c
 environments:
 - ingress:
-    domain: ""
+    domain: 35.240.81.172.nip.io
     externalDNS: false
-    namespaceSubDomain: ""
+    namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
@@ -46,7 +47,7 @@ environments:
 gitops: true
 helmfile: true
 ingress:
-  domain: ""
+  domain: 35.240.81.172.nip.io
   externalDNS: false
   namespaceSubDomain: -jx.
   tls:
